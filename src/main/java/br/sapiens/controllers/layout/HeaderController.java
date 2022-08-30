@@ -25,6 +25,11 @@ public class HeaderController {
     }
 
     @FXML
+    public void formularioPessoa(){
+        callBack.apply(ViewEnum.FormularioPessoa);
+    }
+
+    @FXML
     public void initialize() throws IOException {
 
     }

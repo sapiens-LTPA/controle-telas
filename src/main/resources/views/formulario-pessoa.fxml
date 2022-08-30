@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox spacing="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <HBox spacing="5.0">
+            <children>
+               <Label text="Nome" />
+               <TextField fx:id="nome" />
+            </children>
+         </HBox>
+         <HBox spacing="5.0">
+            <children>
+
+               <Label text="Sobre Nome" />
+               <TextField fx:id="sobrenome" />
+            </children>
+         </HBox>
+         <HBox spacing="5.0">
+            <children>
+               <Label text="email" />
+               <TextField fx:id="email" />
+            </children>
+         </HBox>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </opaqueInsets>
+</AnchorPane>
