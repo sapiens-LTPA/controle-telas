@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchor" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sapiens.controllers.PessoaController">
    <children>
       <VBox spacing="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <HBox spacing="5.0">
@@ -17,13 +17,18 @@
             <children>
 
                <Label text="Sobre Nome" />
-               <TextField fx:id="sobrenome" />
+               <TextField fx:id="sobreNome" />
             </children>
          </HBox>
          <HBox spacing="5.0">
             <children>
                <Label text="email" />
                <TextField fx:id="email" />
+            </children>
+         </HBox>
+         <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="70.0" spacing="5.0">
+            <children>
+               <Button mnemonicParsing="false" text="Salvar" onAction="#salvar"/>
             </children>
          </HBox>
       </VBox>
