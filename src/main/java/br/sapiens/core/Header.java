@@ -11,7 +11,7 @@ import java.util.function.Function;
 public class Header {
 
     public Node getHeader(Function<ViewEnum,Void> trocaTela) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Header.class.getResource("/layout/header.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Header.class.getResource("/layout/menuBarra.fxml"));
         Node node = fxmlLoader.load();
         Object controller = fxmlLoader.getController();
         if(controller instanceof HeaderController)

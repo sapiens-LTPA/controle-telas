@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<MenuBar fx:controller="br.sapiens.controllers.layout.HeaderController" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <menus>
+      <Menu onAction="#inicio" mnemonicParsing="false" text="Inicio" />
+      <Menu mnemonicParsing="false" text="Telas">
+        <items>
+            <MenuItem onAction="#tela1" mnemonicParsing="false" text="Tela 1" />
+            <MenuItem onAction="#tela2" mnemonicParsing="false" text="Tela 2" />
+        </items>
+      </Menu>
+   </menus>
+</MenuBar>

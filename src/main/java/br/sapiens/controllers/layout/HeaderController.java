@@ -15,6 +15,10 @@ public class HeaderController {
     }
 
     @FXML
+    public void inicio(){
+        callBack.apply(ViewEnum.Index);
+    }
+    @FXML
     public void tela1(){
         callBack.apply(ViewEnum.Tela1);
     }
@@ -22,6 +26,11 @@ public class HeaderController {
     @FXML
     public void tela2(){
         callBack.apply(ViewEnum.Tela2);
+    }
+
+    @FXML
+    public void telaErro(){
+        callBack.apply(ViewEnum.TelaErro);
     }
 
     @FXML

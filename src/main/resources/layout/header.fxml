@@ -5,7 +5,9 @@
 
 <HBox fx:controller="br.sapiens.controllers.layout.HeaderController" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Button onAction="#inicio" mnemonicParsing="false" text="Inicio" />
       <Button onAction="#tela1" mnemonicParsing="false" text="Tela 1" />
       <Button onAction="#tela2" mnemonicParsing="false" text="Tela 2" />
+      <Button onAction="#telaErro" mnemonicParsing="false" text="Simula Erro" />
    </children>
 </HBox>
