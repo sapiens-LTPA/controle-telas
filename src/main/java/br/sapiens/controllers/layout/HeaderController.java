@@ -1,6 +1,7 @@
 package br.sapiens.controllers.layout;
 
 import br.sapiens.core.ViewEnum;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import java.io.IOException;
@@ -36,5 +37,10 @@ public class HeaderController {
     @FXML
     public void initialize() throws IOException {
 
+    }
+
+    @FXML
+    public void formularioPessoa() {
+        callBack.apply(ViewEnum.FormularioPessoa);
     }
 }

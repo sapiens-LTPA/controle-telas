@@ -6,6 +6,9 @@ module com.example.controletelas {
     opens br.sapiens to javafx.fxml;
     exports br.sapiens;
 
+    opens br.sapiens.modelo to javafx.fxml;
+    exports br.sapiens.modelo;
+
     exports br.sapiens.controllers;
     opens br.sapiens.controllers to javafx.fxml;
 

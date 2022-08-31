@@ -12,5 +12,10 @@
             <MenuItem onAction="#tela2" mnemonicParsing="false" text="Tela 2" />
         </items>
       </Menu>
+       <Menu mnemonicParsing="false" text="Cadastro">
+           <items>
+               <MenuItem onAction="#formularioPessoa" mnemonicParsing="false" text="Pessoa" />
+           </items>
+       </Menu>
    </menus>
 </MenuBar>
