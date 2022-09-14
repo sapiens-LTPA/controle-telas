@@ -18,5 +18,4 @@ public class Header {
             ((HeaderController) controller).setCallBack(trocaTela);
         return node;
     }
-
 }

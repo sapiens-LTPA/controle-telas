@@ -1,20 +1,37 @@
 package br.sapiens.modelo;
 
+import br.sapiens.MeuException;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class Pessoa {
     private final String nome;
     private final String sobreNome;
     private final String email;
+    private final List<Matricula> matriculas;
+    private final CursosEnum curso;
     private ProfissaoEnum profissao;
 
     private List<Disciplina> disciplinas;
+    private boolean bolsa = false;
 
-    public Pessoa(String nome, String sobreNome, String email){
+    public Pessoa(String nome, String sobreNome, String email, CursosEnum curso ) throws MeuException {
         this.nome = nome;
+        if(nome == null)
+            throw new MeuException("Nome não pode ser null");
+        if(sobreNome == null)
+            throw new MeuException("Sobre nome não pode ser null");
         this.sobreNome = sobreNome;
         this.email = email;
-        this.profissao = profissao;
+        if(!Pattern.compile("^(.+)@(\\S+)$")
+                .matcher(email)
+                .matches())
+            throw new MeuException("Email invalido");
+        this.profissao = ProfissaoEnum.Nenhum;
+        this.matriculas = new ArrayList();
+        this.curso = curso;
     }
 
     public String getNome() {
@@ -37,8 +54,8 @@ public class Pessoa {
         this.profissao = profissao;
     }
 
-    public List<Disciplina> getDisciplinas() {
-        return disciplinas;
+    public List<Matricula> getMatriculas() {
+        return matriculas;
     }
 
     public void setDisciplinas(List<Disciplina> disciplinas) {
@@ -51,13 +68,14 @@ public class Pessoa {
     }
 
     public boolean getBolsa() {
-        return true;
+        return bolsa;
     }
 
     public void setBolsa(boolean b) {
+        this.bolsa = b;
     }
 
     public CursosEnum getCurso() {
-        return null;
+        return curso;
     }
 }

@@ -1,5 +1,6 @@
 package br.sapiens.controllers.layout;
 
+import br.sapiens.MeuException;
 import br.sapiens.core.Header;
 import br.sapiens.core.ViewEnum;
 import br.sapiens.core.ViewsBuilder;
@@ -22,7 +23,9 @@ public class MainController {
 
     public void initialize() throws IOException {
         painel.setTop(new Header().getHeader(this::trocaTela));
-        painel.setBottom(new Label("Sapiens"));
+        var label = new Label("Sapiens");
+        MeuException.setLabel(label);
+        painel.setBottom(label);
         trocaTela(ViewEnum.Index);
     }
 }
