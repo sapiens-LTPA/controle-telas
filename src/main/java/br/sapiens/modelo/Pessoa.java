@@ -19,9 +19,9 @@ public class Pessoa {
 
     public Pessoa(String nome, String sobreNome, String email, CursosEnum curso ) throws MeuException {
         this.nome = nome;
-        if(nome == null)
+        if(nome.isEmpty())
             throw new MeuException("Nome não pode ser null");
-        if(sobreNome == null)
+        if(sobreNome.isEmpty())
             throw new MeuException("Sobre nome não pode ser null");
         this.sobreNome = sobreNome;
         this.email = email;
