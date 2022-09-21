@@ -64,7 +64,8 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return nome+" "+sobreNome+" | "+email;
+        return nome+" "+sobreNome+" | "+email +
+                " | "+curso+" | "+profissao+" | "+bolsa;
     }
 
     public boolean getBolsa() {

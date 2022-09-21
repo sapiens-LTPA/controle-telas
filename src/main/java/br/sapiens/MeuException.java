@@ -10,6 +10,10 @@ public class MeuException extends Exception {
         super(msg);
     }
 
+    public MeuException(Throwable t) {
+        super(t);
+    }
+
     public static void setLabel(Label label) {
         MeuException.LABEL = label;
     }
